@@ -4,7 +4,7 @@ namespace App\JPR\Modelos\Proceso;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProcesosDocs extends Model
+class ProcesoDoc extends Model
 {
     protected $table = 'tpro_procesos_docs';
     protected $primaryKey = 'n_id_proceso_doc';

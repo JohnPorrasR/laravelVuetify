@@ -4,7 +4,7 @@ namespace App\JPR\Modelos\Maestros;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PerfilesEntidades extends Model
+class PerfilEntidad extends Model
 {
     protected $table = 'tmae_perfiles_entidades';
     protected $primaryKey = 'n_id_perfil_entidad';

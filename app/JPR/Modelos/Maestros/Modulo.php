@@ -4,7 +4,7 @@ namespace App\JPR\Modelos\Maestros;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Modulos extends Model
+class Modulo extends Model
 {
     protected $table = 'tmae_modulos';
     protected $primaryKey = 'n_id_modulo';

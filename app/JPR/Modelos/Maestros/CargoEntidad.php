@@ -4,7 +4,7 @@ namespace App\JPR\Modelos\Maestros;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CargosEntidades extends Model
+class CargoEntidad extends Model
 {
     protected $table = 'tmae_cargos_entidades';
     protected $primaryKey = 'n_id_cargo_entidad';

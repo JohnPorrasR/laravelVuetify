@@ -2,27 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="670268c7-793f-4849-9034-ae5532b0a72e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Proceso/Procesos.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Proceso/ProcesosDocs.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Procesos.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ProcesosDocs.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/BaseRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadEntidadRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/CargoEntidadRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/CargoRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/EntidadRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/LogRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ModuloRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/OficinaEntidadRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/OficinaRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PartablaRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilEntidadRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PermisoBaseRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PermisoRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaEntidadRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Proceso/ProcesoDocRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/JPR/Repositorios/Proceso/ProcesoRepo.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadesEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadEntidad.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargos.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargo.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargosEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargoEntidad.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidad.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulos.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulo.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficinas.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficina.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinasEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinaEntidad.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfiles.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfil.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilesEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilEntidad.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permisos.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permiso.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PermisosBases.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PermisoBase.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Personas.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Persona.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PersonasEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PersonaEntidad.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Proceso/Procesos.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Proceso/Proceso.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Proceso/ProcesosDocs.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Proceso/ProcesoDoc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividades.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadesEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadesEntidades.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargos.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargosEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargosEntidades.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidades.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Log.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Log.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulos.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficinas.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficinas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinasEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinasEntidades.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Partabla.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Partabla.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfiles.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfiles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilesEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilesEntidades.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permisos.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permisos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PermisosBases.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PermisosBases.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Personas.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Personas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PersonasEntidades.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PersonasEntidades.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,7 +63,20 @@
     <favorites_list name="laravelVue" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ProcesoDocRepo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Proceso/ProcesoDocRepo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding>
+                <element signature="e#48#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
@@ -107,6 +135,27 @@
         <option value="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ProcesosDocs.php" />
         <option value="$PROJECT_DIR$/app/JPR/Modelos/Proceso/Procesos.php" />
         <option value="$PROJECT_DIR$/app/JPR/Modelos/Proceso/ProcesosDocs.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Proceso/BaseRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/BaseRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadesRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadesEntidadesRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/CargosRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/CargoEntidadRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/EntidadRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/LogRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ModuloRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/OficinaRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/OficinaEntidadRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PartablaRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilEntidadRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PermisoRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PermisoBaseRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaEntidadRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Proceso/ProcesoRepo.php" />
+        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Proceso/ProcesoDocRepo.php" />
       </list>
     </option>
   </component>
@@ -214,8 +263,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="516" />
-    <option name="y" value="84" />
+    <option name="x" value="255" />
+    <option name="y" value="51" />
     <option name="width" value="1533" />
     <option name="height" value="1000" />
   </component>
@@ -225,7 +274,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers ProjectPane="true" />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -282,6 +331,36 @@
               <option name="myItemId" value="JPR" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositorios" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravelVue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravelVue" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPR" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositorios" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proceso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -330,10 +409,6 @@
               <option name="myItemId" value="Modelos" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maestros" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -346,6 +421,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\html\Investigacion\php\laravel\laravelVue\app\JPR\Repositorios" />
       <recent name="C:\xampp\htdocs\html\Investigacion\php\laravel\laravelVue\app\JPR\Modelos\Proceso" />
       <recent name="C:\xampp\htdocs\html\Investigacion\php\laravel\laravelVue\app\JPR\Modelos\Maestros" />
     </key>
@@ -446,12 +522,12 @@
       <updated>1581096524329</updated>
       <workItem from="1581096527778" duration="3029000" />
       <workItem from="1581344719417" duration="2000000" />
-      <workItem from="1581346746094" duration="3228000" />
+      <workItem from="1581346746094" duration="5471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8257000" />
+    <option name="totallyTimeSpent" value="10500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,7 +539,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="516" y="84" width="1533" height="1000" extended-state="0" />
+    <frame x="255" y="51" width="1533" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -472,7 +549,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19008826" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="497" y="194" width="346" height="747" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21724372" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="497" y="194" width="346" height="747" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -494,7 +571,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -507,15 +586,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Actividades.php" />
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividades.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadesEntidades.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadEntidad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -523,7 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargos.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -531,7 +602,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargosEntidades.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargoEntidad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -539,7 +610,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidades.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -555,7 +626,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulos.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficina.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -563,15 +634,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficinas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinasEntidades.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinaEntidad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -587,7 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfiles.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -595,7 +658,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilesEntidades.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilEntidad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -603,7 +666,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permisos.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permiso.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -611,7 +674,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/PermisosBases.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/PermisoBase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
@@ -619,35 +682,235 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Personas.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/BaseRepo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/PersonasEntidades.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Proceso/ProcesosDocs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Proceso/Procesos.php">
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Persona.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/PersonaEntidad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/CargoEntidadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <element signature="e#50#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/CargoRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/EntidadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#49#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/LogRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#49#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ModuloRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#49#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/OficinaRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#49#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/OficinaEntidadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#49#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PartablaRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#49#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#49#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilEntidadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#49#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PermisoRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#49#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PermisoBaseRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#49#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#49#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaEntidadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#49#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Proceso/Proceso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Proceso/ProcesoDoc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadEntidadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#49#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Proceso/ProcesoRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#48#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Proceso/ProcesoDocRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#48#87#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
