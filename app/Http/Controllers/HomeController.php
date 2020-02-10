@@ -2,27 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\JPR\Repositorios\Maestros\CargoRepo;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class HomeController extends ApiController
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    protected $cargoRepo;
+
+    public function __construct(CargoRepo $cargoRepo)
     {
-        $this->middleware('auth');
+       $this->cargoRepo = $cargoRepo;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        $data = $this->cargoRepo->all();
+        return $this->showAll($data);
     }
 }
