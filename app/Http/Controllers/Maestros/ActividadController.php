@@ -13,6 +13,8 @@ class ActividadController extends ApiController
 
     public function __construct(ActividadRepo $actividadRepo)
     {
+        parent::__construct();
+        $this->middleware('transform.input');
         $this->actividadRepo = $actividadRepo;
     }
 
