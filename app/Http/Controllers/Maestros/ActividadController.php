@@ -13,8 +13,7 @@ class ActividadController extends ApiController
 
     public function __construct(ActividadRepo $actividadRepo)
     {
-        parent::__construct();
-        $this->middleware('transform.input');
+        //$this->middleware('transform.input');
         $this->actividadRepo = $actividadRepo;
     }
 
@@ -33,7 +32,7 @@ class ActividadController extends ApiController
     {
         $input = $request->all();
         $data = $this->actividadRepo->store($input);
-        return $this->showOne($data, 201);
+        return $this->showOne($data);
     }
 
     public function show($id)
