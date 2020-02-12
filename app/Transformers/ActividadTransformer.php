@@ -23,6 +23,12 @@ class ActividadTransformer extends TransformerAbstract
             'nombre'        => (string)$actividad->x_nomb_actividad,
             'descripcion'   => (string)$actividad->x_desc_actividad,
             'estado'        => (int)$actividad->m_estado,
+            'links'         => [
+                [
+                    'rel'   => 'self',
+                    'href'  => route('actividad.show', $actividad->n_id_actividad),
+                ]
+            ]
         ];
     }
 
