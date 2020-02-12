@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Maestros;
 use App\Http\Controllers\ApiController;
 use App\Http\Requests\Maestros\Crear\StoreActividadRequest;
 use App\JPR\Repositorios\Maestros\ActividadRepo;
-use Illuminate\Support\Facades\Request;
+use App\Transformers\ActividadTransformer;
+use Illuminate\Http\Request;
 
 class ActividadController extends ApiController
 {
@@ -13,7 +14,8 @@ class ActividadController extends ApiController
 
     public function __construct(ActividadRepo $actividadRepo)
     {
-        //$this->middleware('transform.input');
+        parent::__construct();
+        $this->middleware('transform.input:'.ActividadTransformer::class)->only(['store', 'update']);
         $this->actividadRepo = $actividadRepo;
     }
 
@@ -21,11 +23,6 @@ class ActividadController extends ApiController
     {
         $data = $this->actividadRepo->where('m_estado', 1);
         return $this->showAll($data);
-    }
-
-    public function create()
-    {
-        //
     }
 
     public function store(StoreActividadRequest $request)
@@ -41,18 +38,17 @@ class ActividadController extends ApiController
         return $this->showOne($data);
     }
 
-    public function edit($id)
-    {
-        //
-    }
-
     public function update(Request $request, $id)
     {
-        //
+        $input  = $request->all();
+        $data   = $this->actividadRepo->edit($input, $id);
+        return $this->showOne($data);
     }
-
+    
     public function destroy($id)
     {
-        //
+        $input = ['m_estado' => 0];
+        $data = $this->actividadRepo->edit($input, $id);
+        return $this->showOne($data);
     }
 }
