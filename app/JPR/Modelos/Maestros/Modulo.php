@@ -12,4 +12,10 @@ class Modulo extends Model
     protected $fillable = ['x_modulo_desc', 'x_url', 'x_etiqueta', 'm_modulo_id', 'm_orden', 'm_estado', ];
 
     public $timestamps = false;
+
+    public function modulo()
+    {
+        return $this->hasMany(Modulo::class, 'm_modulo_id','n_id_modulo');
+    }
+
 }

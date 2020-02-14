@@ -13,5 +13,11 @@ class ModuloController extends ApiController
     {
         $this->moduloRepo = $moduloRepo;
     }
+
+    public function index()
+    {
+        return $this->moduloRepo->withOneTables('','','');
+    }
+
 }
 

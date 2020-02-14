@@ -12,4 +12,10 @@ class Perfil extends Model
     protected $fillable = ['x_desc_perfil', 'm_estado', ];
 
     public $timestamps = false;
+
+    public function perfiles_entidades()
+    {
+        return $this->hasMany(PerfilEntidad::class, 'm_perfil_id', 'n_id_perfil');
+    }
+
 }

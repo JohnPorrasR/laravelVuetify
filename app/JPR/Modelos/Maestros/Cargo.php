@@ -12,4 +12,10 @@ class Cargo extends Model
     protected $fillable = ['x_cargo_desc', 'm_estado',];
 
     public $timestamps = false;
+
+    public function entidad()
+    {
+        return $this->hasMany(CargoEntidad::class, 'm_cargo_id', 'n_id_cargo');
+    }
+
 }

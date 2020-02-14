@@ -21,7 +21,7 @@ class ActividadController extends ApiController
 
     public function index()
     {
-        $data = $this->actividadRepo->where('m_estado', 1);
+        $data = $this->actividadRepo->withOneTables('entidades','x_nomb_actividad');
         return $this->showAll($data);
     }
 
@@ -44,7 +44,7 @@ class ActividadController extends ApiController
         $data   = $this->actividadRepo->edit($input, $id);
         return $this->showOne($data);
     }
-    
+
     public function destroy($id)
     {
         $input = ['m_estado' => 0];
