@@ -2,7 +2,7 @@
 
 namespace App\JPR\Modelos\Maestros;
 
-use App\Transformers\ActividadTransformer;
+use App\Transformers\Maestros\ActividadTransformer;
 use Illuminate\Database\Eloquent\Model;
 
 class Actividad extends Model
@@ -19,6 +19,5 @@ class Actividad extends Model
     public function entidades()
     {
         return $this->belongsToMany(Entidad::class,'tmae_actividades_entidades','m_actividad_id','m_entidad_id','n_id_actividad','n_id_entidad');
-        // return $this->hasMany(ActividadEntidad::class, 'm_actividad_id', 'n_id_actividad');
     }
 }

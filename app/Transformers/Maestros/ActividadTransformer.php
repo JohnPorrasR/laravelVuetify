@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Transformers;
+namespace App\Transformers\Maestros;
 
 use App\JPR\Modelos\Maestros\Actividad;
 use League\Fractal\TransformerAbstract;
@@ -19,7 +19,7 @@ class ActividadTransformer extends TransformerAbstract
     public function transform(Actividad $actividad)
     {
         return [
-            'cod'           => (int)$actividad->n_id_actividad,
+            'actividad'     => (int)$actividad->n_id_actividad,
             'nombre'        => (string)$actividad->x_nomb_actividad,
             'descripcion'   => (string)$actividad->x_desc_actividad,
             'estado'        => (int)$actividad->m_estado,
@@ -35,7 +35,7 @@ class ActividadTransformer extends TransformerAbstract
     public static function originalAttribute($index)
     {
         $attributes = [
-            'cod'           => 'n_id_actividad',
+            'actividad'     => 'n_id_actividad',
             'nombre'        => 'x_nomb_actividad',
             'descripcion'   => 'x_desc_actividad',
             'estado'        => 'm_estado',
@@ -46,7 +46,7 @@ class ActividadTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'n_id_actividad'    => 'cod',
+            'n_id_actividad'    => 'actividad',
             'x_nomb_actividad'  => 'nombre',
             'x_desc_actividad'  => 'descripcion',
             'm_estado'          => 'estado',

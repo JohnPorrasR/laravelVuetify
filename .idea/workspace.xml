@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="670268c7-793f-4849-9034-ae5532b0a72e" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Transformers/ActividadTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/Maestros/ActividadTransformer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Maestros/ActividadController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Maestros/ActividadController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Maestros/ModuloController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Maestros/ModuloController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadEntidad.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadEntidad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargo.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Cargo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargoEntidad.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/CargoEntidad.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidad.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulo.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Modulo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficina.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Oficina.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinaEntidad.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/OficinaEntidad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfil.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilEntidad.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/PerfilEntidad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permiso.php" afterPath="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permiso.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +36,8 @@
       <file leaf-file-name="ActividadController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Maestros/ActividadController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="23" column="81" lean-forward="false" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+            <state relative-caret-position="170">
+              <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
               <folding>
                 <element signature="e#49#88#0#PHP" expanded="true" />
               </folding>
@@ -57,21 +48,11 @@
       <file leaf-file-name="Actividad.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="374">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding>
-                <element signature="e#44#86#0#PHP" expanded="true" />
+                <element signature="e#44#95#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActividadEntidad.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadEntidad.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -79,9 +60,11 @@
       <file leaf-file-name="Entidad.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidad.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="17" selection-end-column="147" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="20" column="145" lean-forward="false" selection-start-line="20" selection-start-column="145" selection-end-line="20" selection-end-column="145" />
+              <folding>
+                <element signature="e#44#93#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,8 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/OficinaEntidadRepo.php" />
-        <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PartablaRepo.php" />
         <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilRepo.php" />
         <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PerfilEntidadRepo.php" />
         <option value="$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PermisoRepo.php" />
@@ -163,7 +144,6 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/Maestros/Crear/StoreActividadRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Traits/ApiResponser.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/app/Transformers/ActividadTransformer.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/TransformInput.php" />
@@ -177,9 +157,12 @@
         <option value="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Permiso.php" />
         <option value="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Perfil.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Maestros/ModuloController.php" />
+        <option value="$PROJECT_DIR$/app/Traits/ApiResponser.php" />
+        <option value="$PROJECT_DIR$/app/Transformers/Maestros/ActividadTransformer.php" />
+        <option value="$PROJECT_DIR$/app/Transformers/Maestros/EntidadTransformer.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Maestros/ActividadController.php" />
         <option value="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidad.php" />
         <option value="$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Maestros/ActividadController.php" />
       </list>
     </option>
   </component>
@@ -290,10 +273,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-16" />
-    <option name="y" value="141" />
-    <option name="width" value="1873" />
-    <option name="height" value="908" />
+    <option name="x" value="133" />
+    <option name="y" value="100" />
+    <option name="width" value="1673" />
+    <option name="height" value="941" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -313,6 +296,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -353,51 +338,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JPR" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravelVue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravelVue" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JPR" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modelos" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravelVue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravelVue" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JPR" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modelos" />
+              <option name="myItemId" value="Transformers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -405,10 +346,26 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravelVue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravelVue" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Traits" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,6 +375,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\html\Investigacion\php\laravel\laravelVue\app\Transformers\Maestros" />
       <recent name="C:\xampp\htdocs\html\Investigacion\php\laravel\laravelVue\app\JPR\Repositorios" />
       <recent name="C:\xampp\htdocs\html\Investigacion\php\laravel\laravelVue\app\JPR\Modelos\Proceso" />
       <recent name="C:\xampp\htdocs\html\Investigacion\php\laravel\laravelVue\app\JPR\Modelos\Maestros" />
@@ -526,11 +484,12 @@
       <workItem from="1581515092703" duration="4733000" />
       <workItem from="1581523089754" duration="13132000" />
       <workItem from="1581599052579" duration="177000" />
+      <workItem from="1581970723422" duration="4991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59235000" />
+    <option name="totallyTimeSpent" value="64226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -542,17 +501,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="141" width="1873" height="908" extended-state="0" />
+    <frame x="133" y="100" width="1673" height="941" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2651515" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="497" y="194" width="346" height="747" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18040918" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="497" y="194" width="346" height="747" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32860824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20520769" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275649" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -579,13 +539,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaRepo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/PersonaEntidadRepo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -782,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadRepo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -807,20 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Transformers/ActividadTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Traits/ApiResponser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -894,13 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/BaseRepo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="114" column="114" lean-forward="true" selection-start-line="114" selection-start-column="114" selection-end-line="114" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Maestros/ActividadEntidadController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -908,36 +833,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/Maestros/ActividadRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/ActividadEntidad.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Traits/ApiResponser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/JPR/Repositorios/BaseRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="86" column="20" lean-forward="false" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Transformers/Maestros/EntidadTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding>
+            <element signature="e#45#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Transformers/Maestros/ActividadTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Entidad.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="17" selection-end-column="147" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="20" column="145" lean-forward="false" selection-start-line="20" selection-start-column="145" selection-end-line="20" selection-end-column="145" />
+          <folding>
+            <element signature="e#44#93#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/JPR/Modelos/Maestros/Actividad.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="374">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding>
-            <element signature="e#44#86#0#PHP" expanded="true" />
+            <element signature="e#44#95#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Maestros/ActividadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="23" column="81" lean-forward="false" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+        <state relative-caret-position="170">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
           <folding>
             <element signature="e#49#88#0#PHP" expanded="true" />
           </folding>

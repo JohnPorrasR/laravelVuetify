@@ -2,10 +2,13 @@
 
 namespace App\JPR\Modelos\Maestros;
 
+use App\Transformers\Maestros\EntidadTransformer;
 use Illuminate\Database\Eloquent\Model;
 
 class Entidad extends Model
 {
+    public $transformer = EntidadTransformer::class;
+
     protected $table = 'tmae_entidades';
     protected $primaryKey = 'n_id_entidad';
 
@@ -15,8 +18,7 @@ class Entidad extends Model
 
     public function actividades()
     {
-        return $this->belongsToMany(Actividad::class,'tmae_actividades_entidades','m_actividad_id','m_entidad_id','n_id_actividad','n_id_entidad');
-        // return $this->hasMany(ActividadEntidad::class, 'm_entidad_id', 'n_id_entidad');
+        return $this->belongsToMany(Actividad::class,'tmae_actividades_entidades','m_actividad_id','m_entidad_id','n_id_entidad','n_id_actividad');
     }
 
     public function cargos()
