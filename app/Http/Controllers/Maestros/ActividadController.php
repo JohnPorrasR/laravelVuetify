@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Maestros;
 
 use App\Http\Controllers\ApiController;
+use App\Http\Requests\Maestros\Actualizar\UpdateActividadRequest;
 use App\Http\Requests\Maestros\Crear\StoreActividadRequest;
+use App\JPR\Repositorios\Maestros\ActividadEntidadRepo;
 use App\JPR\Repositorios\Maestros\ActividadRepo;
 use App\JPR\Repositorios\Maestros\EntidadRepo;
 use App\Transformers\Maestros\ActividadTransformer;
@@ -13,47 +15,72 @@ use Illuminate\Http\Request;
 class ActividadController extends ApiController
 {
     protected $actividadRepo;
-    protected $entidadRepo;
+    protected $actividadEntidadRepo;
 
-    public function __construct(ActividadRepo $actividadRepo, EntidadRepo $entidadRepo)
+    public function __construct(ActividadRepo $actividadRepo, ActividadEntidadRepo $actividadEntidadRepo)
     {
         parent::__construct();
-        $this->middleware('transform.input:'.ActividadTransformer::class)->only(['store', 'update']);
-        $this->middleware('transform.input:'.EntidadTransformer::class)->only(['store', 'update']);
-        $this->actividadRepo = $actividadRepo;
-        $this->entidadRepo = $entidadRepo;
+        // $this->middleware('transform.input:'.ActividadTransformer::class)->only(['store', 'update']);
+        $this->actividadRepo        = $actividadRepo;
+        $this->actividadEntidadRepo = $actividadEntidadRepo;
     }
 
     public function index()
     {
-        $data = $this->entidadRepo->withOneTables('actividades','x_entidad_nomb');
+        $data = $this->actividadRepo->withOneTables('entidades','n_id_actividad');
         return $this->showAll($data);
     }
 
     public function store(StoreActividadRequest $request)
     {
-        $input = $request->all();
-        $data = $this->actividadRepo->store($input);
-        return $this->showOne($data);
+        $nomb       = $request->input('x_nomb_actividad');
+        $desc       = $request->input('x_desc_actividad');
+        $estado     = $request->input('m_estado');
+        $entidad    = $request->input('n_id_entidad');
+        $inputAct   = ['x_nomb_actividad' => $nomb, 'x_desc_actividad' => $desc, 'm_estado' => $estado];
+        $dataAct    = $this->actividadRepo->store($inputAct);
+        $data       = [];
+        if($dataAct['n_id_actividad'] > 0)
+        {
+            $inputAE    = ["m_actividad_id" => $dataAct['n_id_actividad'], "m_entidad_id" => $entidad];
+            $this->actividadEntidadRepo->store($inputAE);
+            $data = $this->actividadRepo->withOneTablesWhere('entidades','n_id_actividad',$dataAct['n_id_actividad'],'n_id_actividad');
+        }
+        return $this->showOneWith($data);
     }
 
     public function show($id)
     {
-        $data = $this->actividadRepo->show($id);
-        return $this->showOne($data);
+        $data = $this->actividadRepo->withOneTablesWhere('entidades','n_id_actividad',$id,'n_id_actividad');
+        return $this->showOneWith($data);
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateActividadRequest $request, $id)
     {
-        $input  = $request->all();
-        $data   = $this->actividadRepo->edit($input, $id);
-        return $this->showOne($data);
+        if(is_numeric($id))
+        {
+            $input  = $request->all();
+            $this->actividadRepo->edit($input, $id);
+            $data = $this->actividadRepo->withOneTablesWhere('entidades','n_id_actividad', $id,'n_id_actividad');
+            return $this->showOneWith($data);
+        }
+        else
+        {
+            return $this->errorResponce('Debe de ingresar un ID valido.',400);
+        }
     }
 
     public function destroy($id)
     {
-        $input = ['m_estado' => 0];
-        $data = $this->actividadRepo->edit($input, $id);
-        return $this->showOne($data);
+        if(is_numeric($id))
+        {
+            $input = ['m_estado' => 0];
+            $data = $this->actividadRepo->edit($input, $id);
+            return $this->showOne($data);
+        }
+        else
+        {
+            return $this->errorResponce('Debe de ingresar un ID valido.',400);
+        }
     }
 }

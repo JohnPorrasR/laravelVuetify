@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Actividad extends Model
 {
-    public $transformer = ActividadTransformer::class;
+    // public $transformer = ActividadTransformer::class;
 
     protected $table = 'tmae_actividades';
     protected $primaryKey = 'n_id_actividad';

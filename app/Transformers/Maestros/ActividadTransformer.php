@@ -13,7 +13,7 @@ class ActividadTransformer extends TransformerAbstract
     ];
 
     protected $availableIncludes = [
-        //
+        'entidades'
     ];
 
     public function transform(Actividad $actividad)
@@ -52,5 +52,16 @@ class ActividadTransformer extends TransformerAbstract
             'm_estado'          => 'estado',
         ];
         return isset($attributes[$index]) ? $attributes[$index] : null;
+    }
+
+    public function  includesEntidadesRelationship(Actividad $actividad)
+    {
+        $entidades = $actividad->entidades;
+        $colleccion  = [];
+        if($entidades)
+        {
+            $colleccion = $this->collection($entidades, new EntidadTransformer());
+        }
+        return $colleccion;
     }
 }

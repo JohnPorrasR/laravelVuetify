@@ -31,7 +31,7 @@ trait ApiResponser
         $collection = $this->filterData($collection, $transformer);
         $collection = $this->sortData($collection, $transformer);
         $collection = $this->paginate($collection);
-        $collection = $this->transformData($collection, $transformer);
+        // $collection = $this->transformData($collection, $transformer);
         $collection = $this->cacheResponse($collection);
 
         return $this->successResponce($collection, $code);
@@ -44,9 +44,16 @@ trait ApiResponser
 
     protected function showOne(Model $instance, $code = 200)
     {
-        $transformer    = $instance->transformer;
-        $instance       = $this->transformData($instance, $transformer);
-        return $this->successResponce($instance, $code);
+        /*$transformer    = $instance->transformer;
+        $instance       = $this->transformData($instance, $transformer);*/
+        return $this->successResponce(['data' => $instance], $code);
+    }
+
+    protected function showOneWith(Collection $collection, $code = 200)
+    {
+        /*$transformer    = $instance->transformer;
+        $instance       = $this->transformData($instance, $transformer);*/
+        return $this->successResponce(['data' => $collection], $code);
     }
 
     protected function paginate(Collection $collection)
@@ -73,24 +80,17 @@ trait ApiResponser
         $rules = [
             'per_page' => 'integer|min:2|max:50'
         ];
-
         Validator::validate(request()->all(), $rules);
-
         $page = LengthAwarePaginator::resolveCurrentPage();
-
         $perPage = 15;
         if (request()->has('per_page')) {
             $perPage = (int) request()->per_page;
         }
-
         $results = $collection->slice(($page - 1) * $perPage, $perPage)->values();
-
         $paginated = new LengthAwarePaginator($results, $collection->count(), $perPage, $page, [
             'path' => LengthAwarePaginator::resolveCurrentPath(),
         ]);
-
         $paginated->appends(request()->all());
-
         return $paginated;
     }
 
@@ -99,7 +99,6 @@ trait ApiResponser
         foreach(request()->query() as $query => $value)
         {
             $attribute = $transformer::originalAttribute($query);
-
             if(isset($attribute, $value))
             {
                 $collection = $collection->where($attribute, $value);
