@@ -10,7 +10,6 @@ use App\JPR\Repositorios\Maestros\ActividadRepo;
 use App\JPR\Repositorios\Maestros\EntidadRepo;
 use App\Transformers\Maestros\ActividadTransformer;
 use App\Transformers\Maestros\EntidadTransformer;
-use Illuminate\Http\Request;
 
 class ActividadController extends ApiController
 {
@@ -51,8 +50,15 @@ class ActividadController extends ApiController
 
     public function show($id)
     {
-        $data = $this->actividadRepo->withOneTablesWhere('entidades','n_id_actividad',$id,'n_id_actividad');
-        return $this->showOneWith($data);
+        if(is_numeric($id))
+        {
+            $data = $this->actividadRepo->withOneTablesWhere('entidades','n_id_actividad',$id,'n_id_actividad');
+            return $this->showOneWith($data);
+        }
+        else
+        {
+            return $this->errorResponce('Debe de ingresar un ID valido.',400);
+        }
     }
 
     public function update(UpdateActividadRequest $request, $id)

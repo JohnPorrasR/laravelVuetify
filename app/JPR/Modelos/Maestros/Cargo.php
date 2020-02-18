@@ -13,9 +13,9 @@ class Cargo extends Model
 
     public $timestamps = false;
 
-    public function entidad()
+    public function entidades()
     {
-        return $this->hasMany(CargoEntidad::class, 'm_cargo_id', 'n_id_cargo');
+        return $this->belongsToMany(Entidad::class,'tmae_cargos_entidades','m_cargo_id','m_entidad_id','n_id_cargo','n_id_entidad');
     }
 
 }
