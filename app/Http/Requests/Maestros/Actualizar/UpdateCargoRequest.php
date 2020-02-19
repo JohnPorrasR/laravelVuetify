@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Maestros\Actualizar;
 
+use App\Rules\Cadena;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateCargoRequest extends FormRequest
@@ -15,7 +16,7 @@ class UpdateCargoRequest extends FormRequest
     public function rules()
     {
         return [
-            'x_cargo_desc'  => 'required|alpha_num',
+            'x_cargo_desc'  => ['required', new Cadena()],
             'm_estado'      =>'required|numeric',
         ];
     }
@@ -24,7 +25,6 @@ class UpdateCargoRequest extends FormRequest
     {
         return [
             'x_cargo_desc.required' => 'Este campo es obligatorio',
-            'x_cargo_desc.alpha_num' => 'Este campo solo acepta texto',
             'm_estado.required' => 'Este campo es obligatorio',
             'm_estado.numeric' => 'Favor de ingresar un número valido',
         ];

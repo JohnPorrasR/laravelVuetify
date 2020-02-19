@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Maestros\Actualizar;
 
+use App\Rules\Cadena;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateActividadRequest extends FormRequest
@@ -15,8 +16,8 @@ class UpdateActividadRequest extends FormRequest
     public function rules()
     {
         return [
-            'x_nomb_actividad'  => 'required',
-            'x_desc_actividad'  => 'required',
+            'x_nomb_actividad'  => ['required', new Cadena()],
+            'x_desc_actividad'  => ['required', new Cadena()],
             'm_estado'          => 'required|numeric',
         ];
     }
