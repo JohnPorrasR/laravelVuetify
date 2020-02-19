@@ -15,7 +15,45 @@ class Perfil extends Model
 
     public function entidades()
     {
-        return $this->belongsToMany(Perfil::class,'tmae_perfil_entidades','m_perfil_id','m_entidad_id','n_id_perfil','n_id_entidad');
+        return $this->belongsToMany(Entidad::class,'tmae_perfiles_entidades','m_perfil_id','m_entidad_id','n_id_perfil','n_id_entidad');
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

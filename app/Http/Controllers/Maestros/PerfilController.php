@@ -5,39 +5,53 @@ namespace App\Http\Controllers\Maestros;
 use App\Http\Controllers\ApiController;
 use App\JPR\Repositorios\Maestros\PerfilEntidadRepo;
 use App\JPR\Repositorios\Maestros\PerfilRepo;
+use App\JPR\Repositorios\Maestros\PermisoBaseRepo;
 use Illuminate\Http\Request;
 
 class PerfilController extends ApiController
 {
     protected $perfilRepo;
     protected $perfilEntidadRepo;
+    protected $permisoBaseRepo;
 
-    public function __construct(PerfilRepo $perfilRepo, PerfilEntidadRepo $perfilEntidadRepo)
+    public function __construct(PerfilRepo $perfilRepo, PerfilEntidadRepo $perfilEntidadRepo, PermisoBaseRepo $permisoBaseRepo)
     {
         $this->perfilRepo = $perfilRepo;
         $this->perfilEntidadRepo = $perfilEntidadRepo;
+        $this->permisoBaseRepo = $permisoBaseRepo;
     }
 
     public function index()
     {
-        $data = $this->perfilRepo->withOneTables('entidades','n_id_actividad');
+        $data = $this->perfilRepo->withOneTables('entidades','n_id_perfil');
         return $this->showAll($data);
     }
 
     public function store(Request $request)
     {
-        $desc       = $request->input('x_desc_perfil');
-        $estado     = $request->input('m_estado');
-        $entidad    = $request->input('n_id_entidad');
-        $input      = ['x_desc_perfil' => $desc, 'm_estado' => $estado];
-        $res        = $this->perfilRepo->store($input);
-        $id         = $res['n_id_perfil'];
-        $data       = [];
+        $desc           = $request->input('x_desc_perfil');
+        $estado         = $request->input('m_estado');
+        $entidad        = $request->input('n_id_entidad');
+        $modulos        = $request->input('modulos');
+        $input          = ['x_desc_perfil' => $desc, 'm_estado' => $estado];
+        $res            = $this->perfilRepo->store($input);
+        $id             = $res['n_id_perfil'];
+        $data           = [];
         if($id > 0)
         {
-            $pivot    = ["m_actividad_id" => $id, "m_entidad_id" => $entidad];
-            $this->perfilRepo->store($pivot);
-            $data = $this->perfilRepo->withOneTablesWhere('entidades','n_id_perfil', $id,'n_id_perfil');
+            $pivot      = ["m_actividad_id" => $id, "m_entidad_id" => $entidad];
+            $resPivot   = $this->perfilRepo->store($pivot);
+            $idPivot    = $resPivot['n_id_perfil_entidad'];
+            if($idPivot > 0)
+            {
+                $array = explode(",", $modulos);
+                for ($i = 0; sizeof($array) < 0; $i++)
+                {
+                    $inputPB = ['m_perfil_entidad_id' => $idPivot, 'm_modulo_id' => $array[$i], 'm_estado' => 1];
+                    $this->permisoBaseRepo->store($inputPB);
+                }
+            }
+            $data       = $this->perfilRepo->withOneTablesWhere('entidades','n_id_perfil', $id,'n_id_perfil');
         }
         return $this->showOneWith($data);
     }
