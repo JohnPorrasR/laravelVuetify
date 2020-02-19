@@ -13,9 +13,9 @@ class Oficina extends Model
 
     public $timestamps = false;
 
-    public function entidad()
+    public function entidades()
     {
-        return $this->hasMany(OficinaEntidad::class, 'm_oficina_id', 'n_id_oficina');
+        return $this->belongsToMany(Entidad::class,'tmae_oficinas_entidades','m_oficina_id','m_entidad_id','n_id_oficina','n_id_entidad');
     }
 
 }

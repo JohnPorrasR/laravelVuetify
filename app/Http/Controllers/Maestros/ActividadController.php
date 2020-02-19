@@ -36,14 +36,15 @@ class ActividadController extends ApiController
         $desc       = $request->input('x_desc_actividad');
         $estado     = $request->input('m_estado');
         $entidad    = $request->input('n_id_entidad');
-        $inputAct   = ['x_nomb_actividad' => $nomb, 'x_desc_actividad' => $desc, 'm_estado' => $estado];
-        $dataAct    = $this->actividadRepo->store($inputAct);
+        $input      = ['x_nomb_actividad' => $nomb, 'x_desc_actividad' => $desc, 'm_estado' => $estado];
+        $res        = $this->actividadRepo->store($input);
+        $cod        = $res['n_id_actividad'];
         $data       = [];
-        if($dataAct['n_id_actividad'] > 0)
+        if($cod > 0)
         {
-            $inputAE    = ["m_actividad_id" => $dataAct['n_id_actividad'], "m_entidad_id" => $entidad];
-            $this->actividadEntidadRepo->store($inputAE);
-            $data = $this->actividadRepo->withOneTablesWhere('entidades','n_id_actividad',$dataAct['n_id_actividad'],'n_id_actividad');
+            $pivot    = ["m_actividad_id" => $cod, "m_entidad_id" => $entidad];
+            $this->actividadEntidadRepo->store($pivot);
+            $data = $this->actividadRepo->withOneTablesWhere('entidades','n_id_actividad', $cod,'n_id_actividad');
         }
         return $this->showOneWith($data);
     }

@@ -17,30 +17,30 @@ class ModuloController extends ApiController
 
     public function index()
     {
-
+        $data = $this->moduloRepo->where('m_estado', 1);
+        return $this->showAll($data);
     }
 
     public function store(Request $request)
     {
-        $cod    = 0;
-        $data   = [];
-        if($cod > 0)
-        {
-
-        }
-        return $this->showOneWith($data);
+        $input  = $request->all();
+        $data   = $this->moduloRepo->store($input);
+        return $this->showOne($data);
     }
 
     public function show($id)
     {
-
+        $data = $this->moduloRepo->show($id);
+        return $this->showOne($data);
     }
 
     public function update(Request $request, $id)
     {
         if(is_numeric($id))
         {
-
+            $input  = $request->all();
+            $data   = $this->moduloRepo->edit($input, $id);
+            return $this->showOne($data);
         }
         else
         {
@@ -52,7 +52,9 @@ class ModuloController extends ApiController
     {
         if(is_numeric($id))
         {
-
+            $input = ['m_estado' => 0];
+            $data = $this->moduloRepo->edit($input, $id);
+            return $this->showOne($data);
         }
         else
         {

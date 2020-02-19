@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Maestros\Crear;
 
+use App\Rules\Cadena;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreActividadRequest extends FormRequest
@@ -15,9 +16,9 @@ class StoreActividadRequest extends FormRequest
     public function rules()
     {
         return [
-            'x_nomb_actividad' =>'required',
-            'x_desc_actividad' =>'required',
-            'm_estado' =>'required|numeric',
+            'x_nomb_actividad'  => ['required', new Cadena()],
+            'x_desc_actividad'  => ['required', new Cadena()],
+            'm_estado'          =>'required|numeric',
         ];
     }
 

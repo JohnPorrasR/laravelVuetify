@@ -13,9 +13,9 @@ class Perfil extends Model
 
     public $timestamps = false;
 
-    public function perfiles_entidades()
+    public function entidades()
     {
-        return $this->hasMany(PerfilEntidad::class, 'm_perfil_id', 'n_id_perfil');
+        return $this->belongsToMany(Perfil::class,'tmae_perfil_entidades','m_perfil_id','m_entidad_id','n_id_perfil','n_id_entidad');
     }
 
 }

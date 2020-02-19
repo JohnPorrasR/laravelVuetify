@@ -2,13 +2,13 @@
 
 namespace App\JPR\Repositorios\Maestros;
 
-use App\JPR\Modelos\Maestros\PersonaEntidad;
+use App\JPR\Modelos\Maestros\PersonaDetalle;
 use App\JPR\Repositorios\BaseRepo;
 
-class PersonaEntidadRepo extends BaseRepo
+class PersonaDetalleRepo extends BaseRepo
 {
     public function getModel()
     {
-        return new PersonaEntidad;
+        return new PersonaDetalle;
     }
 }
