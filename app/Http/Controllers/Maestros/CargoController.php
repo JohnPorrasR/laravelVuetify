@@ -75,7 +75,9 @@ class CargoController extends ApiController
     {
         if(is_numeric($id))
         {
-
+            $input = ['m_estado' => 0];
+            $data = $this->cargoRepo->edit($input, $id);
+            return $this->showOne($data);
         }
         else
         {
