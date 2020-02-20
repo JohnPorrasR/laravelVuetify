@@ -13,6 +13,11 @@ class PermisoBase extends Model
 
     public $timestamps = false;
 
+    public function modulos()
+    {
+        return $this->hasMany(Modulo::class,'m_modulo_id','n_id_modulo');
+    }
+
     public function entidades()
     {
         return $this->belongsToMany(Entidad::class,'tmae_perfil_entidades','m_perfil_id','m_entidad_id','n_id_perfil','n_id_entidad');

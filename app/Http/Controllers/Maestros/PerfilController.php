@@ -31,7 +31,7 @@ class PerfilController extends ApiController
     {
         $desc           = $request->input('x_desc_perfil');
         $estado         = $request->input('m_estado');
-        $entidad        = $request->input('n_id_entidad');
+        $entidad        = $request->input('entidad');
         $modulos        = $request->input('modulos');
         $input          = ['x_desc_perfil' => $desc, 'm_estado' => $estado];
         $res            = $this->perfilRepo->store($input);
@@ -39,13 +39,13 @@ class PerfilController extends ApiController
         $data           = [];
         if($id > 0)
         {
-            $pivot      = ["m_actividad_id" => $id, "m_entidad_id" => $entidad];
-            $resPivot   = $this->perfilRepo->store($pivot);
+            $pivot      = ["m_perfil_id" => $id, "m_entidad_id" => $entidad];
+            $resPivot   = $this->perfilEntidadRepo->store($pivot);
             $idPivot    = $resPivot['n_id_perfil_entidad'];
             if($idPivot > 0)
             {
                 $array = explode(",", $modulos);
-                for ($i = 0; sizeof($array) < 0; $i++)
+                for ($i = 0; $i < sizeof($array); $i++)
                 {
                     $inputPB = ['m_perfil_entidad_id' => $idPivot, 'm_modulo_id' => $array[$i], 'm_estado' => 1];
                     $this->permisoBaseRepo->store($inputPB);
@@ -97,4 +97,13 @@ class PerfilController extends ApiController
             return $this->errorResponce('Debe de ingresar un ID valido.',400);
         }
     }
+
 }
+
+
+
+
+
+
+
+

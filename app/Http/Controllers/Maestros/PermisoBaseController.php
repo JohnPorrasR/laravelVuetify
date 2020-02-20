@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Maestros;
 
 use App\Http\Controllers\ApiController;
+use App\Http\Requests\Maestros\Actualizar\UpdatePermisoBaseRequest;
+use App\Http\Requests\Maestros\Crear\StorePermisoBaseRequest;
 use App\JPR\Repositorios\Maestros\PermisoBaseRepo;
 use Illuminate\Http\Request;
 
@@ -17,30 +19,46 @@ class PermisoBaseController extends ApiController
 
     public function index()
     {
-
+        $data = $this->permisoBaseRepo->obtenerTodos();
+        return $this->showQuery($data);
     }
 
-    public function store(Request $request)
+    public function store(StorePermisoBaseRequest $request)
     {
-        $cod    = 0;
-        $data   = [];
-        if($cod > 0)
+        $perfil = $request->input('m_perfil_entidad_id');
+        $modulos = $request->input('m_modulo_id');
+        $estado = $request->input('m_estado');
+        $array = explode(",", $modulos);
+        for ($i = 0; $i < sizeof($array); $i++)
         {
-
+            $inputPB = ['m_perfil_entidad_id' => $perfil, 'm_modulo_id' => $array[$i], 'm_estado' => $estado];
+            $this->permisoBaseRepo->store($inputPB);
         }
-        return $this->showOneWith($data);
+        $data = $this->permisoBaseRepo->obtenerUno($perfil);
+        return $this->showQuery($data);
     }
 
     public function show($id)
     {
-
+        $data = $this->permisoBaseRepo->obtenerUno($id);
+        return $this->showQuery($data);
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdatePermisoBaseRequest $request, $id)
     {
         if(is_numeric($id))
         {
-
+            $perfil = $request->input('m_perfil_entidad_id');
+            $modulos = $request->input('m_modulo_id');
+            $estado = $request->input('m_estado');
+            $array = explode(",", $modulos);
+            for ($i = 0; $i < sizeof($array); $i++)
+            {
+                $input = ['m_perfil_entidad_id' => $perfil, 'm_modulo_id' => $array[$i], 'm_estado' => $estado];
+                $this->permisoBaseRepo->edit($input, $id);
+            }
+            $data = $this->permisoBaseRepo->obtenerUno($perfil);
+            return $this->showQuery($data);
         }
         else
         {
@@ -52,7 +70,9 @@ class PermisoBaseController extends ApiController
     {
         if(is_numeric($id))
         {
-
+            $input = ['m_estado' => 0];
+            $data = $this->permisoBaseRepo->edit($input, $id);
+            return $this->showOne($data);
         }
         else
         {
