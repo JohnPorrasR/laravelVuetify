@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Maestros;
 
 use App\Http\Controllers\ApiController;
+use App\Http\Requests\Maestros\Actualizar\UpdatePersonaRequest;
+use App\Http\Requests\Maestros\Crear\StorePersonaRequest;
 use App\JPR\Repositorios\Maestros\PersonaDetalleRepo;
 use App\JPR\Repositorios\Maestros\PersonaRepo;
-use Illuminate\Http\Request;
 
 class PersonaController extends ApiController
 {
@@ -24,7 +25,7 @@ class PersonaController extends ApiController
         return $this->showQuery($data);
     }
 
-    public function store(Request $request)
+    public function store(StorePersonaRequest $request)
     {
         $ape_pat        = $request->input('ape_pat');
         $ape_mat        = $request->input('ape_mat');
@@ -61,7 +62,7 @@ class PersonaController extends ApiController
         return $this->showQuery($data);
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdatePersonaRequest $request, $id)
     {
         if(is_numeric($id))
         {
