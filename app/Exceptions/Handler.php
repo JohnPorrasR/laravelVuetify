@@ -45,33 +45,27 @@ class Handler extends ExceptionHandler
             return $this->errorResponce("No existe ninguna instancia de {$modelo} con el id especificado", 404);
         }
 
-        if ($exception instanceof AuthenticationException)
-        {
+        if ($exception instanceof AuthenticationException) {
             return $this->unauthenticated($request, $exception);
         }
 
-        if ($exception instanceof AuthenticationException)
-        {
+        if ($exception instanceof AuthenticationException) {
             return $this->errorResponce('No posee permisos para ejecutar esta accion', 403);
         }
 
-        if ($exception instanceof NotFoundHttpException)
-        {
+        if ($exception instanceof NotFoundHttpException) {
             return $this->errorResponce('No se encontro la url especificada', 404);
         }
 
-        if ($exception instanceof MethodNotAllowedHttpException)
-        {
+        if ($exception instanceof MethodNotAllowedHttpException) {
             return $this->errorResponce('El método especificado en la petición no es válido', 405);
         }
 
-        if ($exception instanceof HttpException)
-        {
+        if ($exception instanceof HttpException) {
             return $this->errorResponce($exception->getMessage(), $exception->getStatusCode());
         }
 
-        if ($exception instanceof QueryException)
-        {
+        if ($exception instanceof QueryException) {
             $codigo = $exception->errorInfo[1];
             if($codigo == 1451)
             {
@@ -89,6 +83,7 @@ class Handler extends ExceptionHandler
             return parent::render($request, $exception);
         }
         return $this->errorResponce('Falla inesperada. Intente luego', 500);
+
     }
 
     protected function unauthenticated($request, AuthenticationException $exception)
@@ -103,11 +98,25 @@ class Handler extends ExceptionHandler
     protected function convertValidationExceptionToResponse(ValidationException $e, $request)
     {
         $errors = $e->validator->errors()->getMessages();
+
+        if($this->isFrontend($request))
+        {
+            if($this->isFrontend($request))
+            {
+                return $request->ajax() ? response()->json($errors, 422) : redirect()
+                    ->back()
+                    ->withInput($request->input())
+                    ->withErrors($errors);
+            }
+        }
+
         return $this->errorResponce($errors, 422);
+
     }
 
     private function isFrontend($request)
     {
         return $request->acceptsHtml() && collect($request->route()->middleware())->contains('web');
     }
+
 }
